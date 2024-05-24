@@ -73,7 +73,7 @@ public class ApiController {
      * @param request id of the spaceship to end and new spaceship's information
      * @throws EntityDontExistException If spaceship does not exist
      */
-    @PutMapping("/edit/{id}")
+    @PutMapping("/{id}")
     public void modify(@RequestBody Spaceship request) throws EntityDontExistException {
         service.edit(request);
     }
@@ -85,7 +85,7 @@ public class ApiController {
      * @return Created spaceship's data, with ID
      * @throws EntityAlreadyExistException If spaceship already exist
      */
-    @PostMapping("/create")
+    @PostMapping()
     public Spaceship create(@RequestBody Spaceship request) throws EntityAlreadyExistException {
         SpaceshipEntity spaceship = service.save(request);
 
@@ -98,7 +98,7 @@ public class ApiController {
      * @param id spaceship's id
      * @throws EntityDontExistException if spaceship does not exist
      */
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/{id}")
     public void delete(@PathVariable("id") Integer id) throws EntityDontExistException {
         service.delete(id);
     }
