@@ -14,7 +14,7 @@
 	<name>spaceships</name>
 	<description>Prueba tecnica W2M - Alejandro Cerrato Espejo - Mayo 2024</description>
 	<properties>
-		<java.version>21</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
