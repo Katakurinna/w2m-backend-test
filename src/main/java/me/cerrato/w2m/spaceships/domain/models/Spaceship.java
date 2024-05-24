@@ -7,6 +7,8 @@ import lombok.Getter;
 @AllArgsConstructor
 public class Spaceship {
 
+    private Long id;
+
     private String name;
 
     private Media media;

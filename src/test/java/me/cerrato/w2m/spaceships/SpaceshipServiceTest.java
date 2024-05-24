@@ -40,7 +40,7 @@ public class SpaceshipServiceTest {
         String spaceshipName = "test";
         String mediaName = "Test-Film";
         MediaType mediaType = MediaType.MOVIE;
-        SpaceshipEntity entity = service.save(new Spaceship(spaceshipName, new Media(mediaName, mediaType)));
+        SpaceshipEntity entity = service.save(new Spaceship(0L, spaceshipName, new Media(mediaName, mediaType)));
         assertEquals(spaceshipName, entity.getName());
         assertEquals(mediaName, entity.getMediaEntity().getName());
         assertEquals(mediaType, entity.getMediaEntity().getType());
@@ -49,10 +49,10 @@ public class SpaceshipServiceTest {
 
     @Test
     public void whenSaveExistingSpaceship_thenReturnException() throws EntityAlreadyExistException {
-        service.save(new Spaceship("Test", new Media("Test-Film", MediaType.MOVIE)));
+        service.save(new Spaceship(0L, "Test", new Media("Test-Film", MediaType.MOVIE)));
         assertThrows(
                 EntityAlreadyExistException.class,
-                () -> service.save(new Spaceship("Test", new Media("Test-Film", MediaType.MOVIE)))
+                () -> service.save(new Spaceship(0L, "Test", new Media("Test-Film", MediaType.MOVIE)))
         );
     }
 
@@ -60,7 +60,7 @@ public class SpaceshipServiceTest {
     public void whenSaveSpaceshipWithNullValues_thenReturnException() {
         assertThrows(
                 IllegalArgumentException.class,
-                () -> service.save(new Spaceship(null, null))
+                () -> service.save(new Spaceship(0L, null, null))
         );
     }
 
@@ -72,9 +72,9 @@ public class SpaceshipServiceTest {
         MediaType mediaType = MediaType.MOVIE;
 
         // Its really needed check if entity is saved OK? this will be tested in upper tests.
-        SpaceshipEntity entity = service.save(new Spaceship(spaceshipName, new Media(mediaName, mediaType)));
+        SpaceshipEntity entity = service.save(new Spaceship(0L, spaceshipName, new Media(mediaName, mediaType)));
 
-        SpaceshipEntity editedEntity = service.edit(entity.getId(), new Spaceship(editedSpaceshipName, null));
+        SpaceshipEntity editedEntity = service.edit( new Spaceship(entity.getId(), editedSpaceshipName, null));
         assertEquals(editedSpaceshipName, editedEntity.getName());
         assertEquals(mediaName, editedEntity.getMediaEntity().getName());
         assertEquals(mediaType, editedEntity.getMediaEntity().getType());
@@ -88,9 +88,9 @@ public class SpaceshipServiceTest {
         MediaType mediaType = MediaType.MOVIE;
 
         // Its really needed check if entity is saved OK? this will be tested in upper tests.
-        SpaceshipEntity entity = service.save(new Spaceship(spaceshipName, new Media(mediaName, mediaType)));
+        SpaceshipEntity entity = service.save(new Spaceship(0L, spaceshipName, new Media(mediaName, mediaType)));
 
-        SpaceshipEntity editedEntity = service.edit(entity.getId(), new Spaceship(spaceshipName, new Media(editedMediaName, mediaType)));
+        SpaceshipEntity editedEntity = service.edit( new Spaceship(entity.getId(),spaceshipName, new Media(editedMediaName, mediaType)));
         assertEquals(spaceshipName, editedEntity.getName());
         assertEquals(editedMediaName, editedEntity.getMediaEntity().getName());
         assertEquals(mediaType, editedEntity.getMediaEntity().getType());
@@ -103,11 +103,11 @@ public class SpaceshipServiceTest {
         MediaType mediaType = MediaType.MOVIE;
 
         // Its really needed check if entity is saved OK? this will be tested in upper tests.
-        SpaceshipEntity entity = service.save(new Spaceship(spaceshipName, new Media(mediaName, mediaType)));
+        SpaceshipEntity entity = service.save(new Spaceship(0L, spaceshipName, new Media(mediaName, mediaType)));
 
         assertThrows(
                 IllegalArgumentException.class,
-                () -> service.edit(entity.getId(), new Spaceship(null, null))
+                () -> service.edit( new Spaceship(entity.getId(),null, null))
         );
     }
 
@@ -115,7 +115,7 @@ public class SpaceshipServiceTest {
     public void whenEditNonExistingSpaceship_thenReturnException() {
         assertThrows(
                 EntityDontExistException.class,
-                () -> service.edit(-1, new Spaceship("error", null))
+                () -> service.edit( new Spaceship(-1L,"error", null))
         );
     }
 
@@ -126,7 +126,7 @@ public class SpaceshipServiceTest {
         MediaType mediaType = MediaType.MOVIE;
 
         // Its really needed check if entity is saved OK? this will be tested in upper tests.
-        SpaceshipEntity entity = service.save(new Spaceship(spaceshipName, new Media(mediaName, mediaType)));
+        SpaceshipEntity entity = service.save(new Spaceship(0L, spaceshipName, new Media(mediaName, mediaType)));
         service.delete(entity.getId());
 
     }
@@ -144,7 +144,7 @@ public class SpaceshipServiceTest {
         String spaceshipName = "test";
         String mediaName = "Test-Film";
         MediaType mediaType = MediaType.MOVIE;
-        SpaceshipEntity entity = service.save(new Spaceship(spaceshipName, new Media(mediaName, mediaType)));
+        SpaceshipEntity entity = service.save(new Spaceship(0L, spaceshipName, new Media(mediaName, mediaType)));
 
         SpaceshipEntity searchedEntity = service.findById(entity.getId());
 
@@ -164,7 +164,7 @@ public class SpaceshipServiceTest {
         String spaceshipName = "test";
         String mediaName = "Test-Film";
         MediaType mediaType = MediaType.MOVIE;
-        SpaceshipEntity entity = service.save(new Spaceship(spaceshipName, new Media(mediaName, mediaType)));
+        SpaceshipEntity entity = service.save(new Spaceship(0L, spaceshipName, new Media(mediaName, mediaType)));
 
         List<SpaceshipEntity> searchedEntities = service.findByNameContaining("es");
 
@@ -185,7 +185,7 @@ public class SpaceshipServiceTest {
         String spaceshipName = "test";
         String mediaName = "Test-Film";
         MediaType mediaType = MediaType.MOVIE;
-        SpaceshipEntity entity = service.save(new Spaceship(spaceshipName, new Media(mediaName, mediaType)));
+        SpaceshipEntity entity = service.save(new Spaceship(0L, spaceshipName, new Media(mediaName, mediaType)));
 
         List<SpaceshipEntity> searchedEntities = service.findAll(1);
 
