@@ -21,7 +21,7 @@ Hola reviewer! Espero podamos conocernos pronto!
 * Test unitario de como mínimo de una clase. ✔ (Dependiendo de la definición per sé de unitario que se utilice)
 * Desarrollar un @Aspect que añada una línea de log cuando nos piden una nave con un id
   negativo. 
-* Gestión centralizada de excepciones.
+* Gestión centralizada de excepciones. ✔
 * Utilizar cachés de algún tipo.  ✔
 
 ## Puntos a tener en cuenta:
