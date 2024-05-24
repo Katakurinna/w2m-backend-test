@@ -1,15 +1,13 @@
 package me.cerrato.w2m.spaceships.infra.db.model;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 @Data
 @Entity
 @Table(name = "spaceship")
 @NoArgsConstructor
+@AllArgsConstructor
 @RequiredArgsConstructor
 public class SpaceshipEntity {
 

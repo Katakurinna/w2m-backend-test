@@ -8,6 +8,7 @@ import me.cerrato.w2m.spaceships.domain.models.MediaType;
 @Entity
 @Table(name = "media")
 @NoArgsConstructor
+@AllArgsConstructor
 @RequiredArgsConstructor
 public class MediaEntity {
 
