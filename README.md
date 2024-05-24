@@ -32,8 +32,8 @@ Hola reviewer! Espero podamos conocernos pronto!
 ## Puntos opcionales de mejora:
 * Utilizar alguna librería que facilite el mantenimiento de los scripts DDL de base de datos.  ✔
 * Test de integración.  ✔
-* Presentar la aplicación dockerizada. 
-* Documentación de la API.
+* Presentar la aplicación dockerizada.  ✔
+* Documentación de la API. 
 * Seguridad del API.
 * Implementar algún consumer/producer para algún broker (Rabbit, Kafka, etc).
 
