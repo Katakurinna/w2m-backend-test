@@ -35,6 +35,5 @@ Hola reviewer! Espero podamos conocernos pronto!
 * Test de integración.  ✔
 * Presentar la aplicación dockerizada.  ✔
 * Documentación de la API. ✔
-* Seguridad del API.
+* Seguridad del API. ✔ (Hay muchos tipos de seguridad en spring, he añadido lo más básico)
 * Implementar algún consumer/producer para algún broker (Rabbit, Kafka, etc).
-
