@@ -72,7 +72,7 @@ public class ApiController {
                     })
     })
     @GetMapping("/{id}")
-    public Spaceship findById(@PathVariable("id") Integer id) throws EntityDontExistException {
+    public Spaceship findById(@PathVariable("id") Long id) throws EntityDontExistException {
         SpaceshipEntity entity = service.findById(id);
         return conversionService.convert(entity, Spaceship.class);
     }
