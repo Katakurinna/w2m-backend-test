@@ -15,4 +15,7 @@ public class ApplicationConfig {
     @Value("${spaceship.database.page.size}")
     private Integer databasePageSize;
 
+    @Value("${spaceship.rabbit.intercept:true}")
+    private Boolean interceptRabbitMessages;
+
 }
