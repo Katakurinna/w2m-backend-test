@@ -21,7 +21,7 @@ Hola reviewer! Espero podamos conocernos pronto!
 * Eliminar una nave.  ✔
 * Test unitario de como mínimo de una clase. ✔ (ConvertersTest)
 * Desarrollar un @Aspect que añada una línea de log cuando nos piden una nave con un id
-  negativo. 
+  negativo. ✔
 * Gestión centralizada de excepciones. ✔
 * Utilizar cachés de algún tipo.  ✔
 
