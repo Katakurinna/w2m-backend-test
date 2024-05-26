@@ -5,6 +5,7 @@
 Hola reviewer! Espero podamos conocernos pronto!
 
 
+
 ## Importante
 * LTS de Java, Spring, Maven y cualquier libreria ✔
 * Desarrollar usando mvn spring y java ✔
@@ -33,7 +34,7 @@ Hola reviewer! Espero podamos conocernos pronto!
 * Utilizar alguna librería que facilite el mantenimiento de los scripts DDL de base de datos.  ✔
 * Test de integración.  ✔
 * Presentar la aplicación dockerizada.  ✔
-* Documentación de la API. 
+* Documentación de la API. ✔
 * Seguridad del API.
 * Implementar algún consumer/producer para algún broker (Rabbit, Kafka, etc).
 
