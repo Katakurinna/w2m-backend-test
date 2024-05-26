@@ -19,7 +19,7 @@ Hola reviewer! Espero podamos conocernos pronto!
 * Crear una nueva nave.  ✔
 * Modificar una nave.  ✔
 * Eliminar una nave.  ✔
-* Test unitario de como mínimo de una clase. ✔ (Dependiendo de la definición per sé de unitario que se utilice)
+* Test unitario de como mínimo de una clase. ✔ (ConvertersTest)
 * Desarrollar un @Aspect que añada una línea de log cuando nos piden una nave con un id
   negativo. 
 * Gestión centralizada de excepciones. ✔
