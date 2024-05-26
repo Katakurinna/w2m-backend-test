@@ -12,7 +12,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/v1/spaceship/all",
+					"raw": "http://localhost:8080/api/v1/spaceship/all?page=1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -23,6 +23,12 @@
 						"v1",
 						"spaceship",
 						"all"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
 					]
 				}
 			},
@@ -34,7 +40,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/v1/spaceship/1",
+					"raw": "http://localhost:8080/api/v1/spaceship/-2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -44,7 +50,7 @@
 						"api",
 						"v1",
 						"spaceship",
-						"1"
+						"-2"
 					]
 				}
 			},
@@ -80,7 +86,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Test\",\r\n    \"media\": {\r\n        \"name\": \"Film\",\r\n        \"type\": \"MOVIE\"\r\n    } \r\n}",
+					"raw": "{\r\n    \"name\": \"Test2\",\r\n    \"media\": {\r\n        \"name\": \"Film\",\r\n        \"type\": \"MOVIE\"\r\n    } \r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -155,6 +161,43 @@
 				}
 			},
 			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "password",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "admin",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
 		}
 	]
 }
